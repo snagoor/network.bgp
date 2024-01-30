@@ -1,7 +1,7 @@
 ---
 - name: Debug
   ansible.builtin.debug:
-    msg: "START network.bgp gather opeartion integration tests on connection={{ ansible_connection }}"
+    msg: START network.bgp gather opeartion integration tests on connection={{ ansible_connection }}
 
 - name: Gather and assertion
   block:
@@ -20,4 +20,4 @@
 
 - name: Debug
   ansible.builtin.debug:
-    msg: "END network.bgp gahter opeartion integration tests on connection={{ ansible_connection }}"
+    msg: END network.bgp gahter opeartion integration tests on connection={{ ansible_connection }}
