@@ -1,7 +1,7 @@
 ---
 - name: Debug
   ansible.builtin.debug:
-    msg: "START network.bgp remediate opeartion integration tests on connection={{ ansible_connection }}"
+    msg: START network.bgp remediate opeartion integration tests on connection={{ ansible_connection }}
 
 - name: Cleanup, Set and remediate
   block:
@@ -11,13 +11,13 @@
     - name: Set resources
       ansible.builtin.set_fact:
         test_resources:
-          - 'bgp_global'
-          - 'bgp_address_family'
+          - bgp_global
+          - bgp_address_family
 
     - name: Set data data_store
       ansible.builtin.set_fact:
         test_data_store:
-          local: "~/test_backup"
+          local: ~/test_backup
 
     - name: Run network.bgp validated content with persist operation
       ansible.builtin.include_role:
@@ -53,4 +53,4 @@
 
 - name: Debug
   ansible.builtin.debug:
-    msg: "END network.bgp remediate opeartion integration tests on connection={{ ansible_connection }}"
+    msg: END network.bgp remediate opeartion integration tests on connection={{ ansible_connection }}
